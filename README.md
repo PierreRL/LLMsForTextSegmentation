@@ -1,6 +1,20 @@
 # LLMs for Topic Segmentation
 
-This repository is a Latex report for research work into the use of generative LLMs for topic segmentation
+This repository is a Latex report for research work into the use of generative LLMs for topic segmentation. 
+
+If you use this work, please cite it:
+
+~~~
+@misc{Pierre,
+  author    = {Pierre Mackenzie and Maya Shah},
+  title     = {LLMs for Topic Segmentation},
+  howpublished = {Online},
+  year      = {2024},
+  month     = {...},
+  doi = {https://github.com/PierreRL/LLMsForTextSegmentation},
+}
+~~~
+
 
 ### Motivation
 
