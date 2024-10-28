@@ -1,15 +1,11 @@
-%%%%%%%% CS-502 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
-
 \documentclass{article}
 
-% Recommended, but optional, packages for figures and better typesetting:
 \usepackage{amsmath} 
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{subfigure}
-\usepackage{booktabs} % for professional tables
+\usepackage{booktabs}
 \usepackage{hyperref}
-\usepackage{subfiles}
 
 \usepackage[accepted]{cs502}
 
@@ -39,24 +35,24 @@
 % 1
 % ---------- Introduction ----------
 \subsection{The Topic Segmentation Problem}
-\subfile{Sections/1. Introduction/1.1 Topic Segmentation Problem}
-\subfile{Sections/1. Introduction/1.2 Related Work}
+\input{Sections/1. Introduction/1.1 Topic Segmentation Problem}
+\input{Sections/1. Introduction/1.2 Related Work}
 
 % 2
 % ---------- Method ----------
 \section{Method}
-\subfile{Sections/2. Method/2.1 Datasets}
-\subfile{Sections/2. Method/2.2 Evaluation}
-\subfile{Sections/2. Method/2.3 LLM-Based Text Segmentation}
+\input{Sections/2. Method/2.1 Datasets}
+\input{Sections/2. Method/2.2 Evaluation}
+\input{Sections/2. Method/2.3 LLM-Based Text Segmentation}
 
 % 3. Experiments
 \section{Experiments}\label{Results}
-\subfile{Sections/3. Experiments/3.1 Models}
-\subfile{Sections/3. Experiments/3.2 Results}
+\input{Sections/3. Experiments/3.1 Models}
+\input{Sections/3. Experiments/3.2 Results}
 
 % 4. Conclusion
 \section{Conclusion}\label{Conclusion}
-\subfile{Sections/4. Conclusion/Conclusion}
+\input{Sections/4. Conclusion/Conclusion.tex}
 
 % Bibliography
 \bibliography{references.bib}
@@ -67,7 +63,7 @@
 
 \appendix
 \section{Appendix}\label{Appendix}
-\subfile{Sections/5. Appendix/5.1 Appendix}
+\input{Sections/5. Appendix/5.1 Appendix}
 
 \end{document}
 
