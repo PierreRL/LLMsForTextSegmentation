@@ -1,0 +1,9 @@
+% 2. Method
+% 2.2 Evaluation
+\subsection{Evaluation}
+
+The methodology in evaluating the quality of a model’s segmentation in this work follows Chris Fournier's \emph{Evaluating Text Segmentation using Boundary Edit Distance} \cite{fournier-2013-B}. This work uses edited versions of the Boundary Edit Distance proposed in this work, along with the associated information recall metrics ‘boundary precision’ and ‘boundary recall’. 
+
+The boundary edit distance algorithm pairs matches of segment boundaries between a reference segmentation and a hypothesised segmentation, regardless of distance between matches. Exact matches score 1 and boundaries without matches score 0, whilst matches within some distance $n$ score partial points based on a weighting function. For this work, the function always decreases score linearly as the boundary gets farther away from the true boundary. Boundary Edit Distance (B) is the mean score for all these matches, while Boundary Precision/Recall (BP/BR) measure the proportion of the hypothesis/reference boundaries which are matched, respectively. 
+
+For further justification of the usage of the boundary edit distance algorithm rather than relying on more traditional metrics such as WD and Pk \cite{HearstW2002}, see \emph{Evaluating Text Segmentation using Boundary Edit Distance}  \cite{fournier-2013-B}, and our own investigations in \href{https://github.com/PierreRL/segmenter-evaluation-metrics}{segmenter evaluation metrics}.

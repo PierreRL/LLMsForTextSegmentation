@@ -1,0 +1,36 @@
+% 3.2 Results
+
+\subsection{Quantitative Results}
+
+Due to resource constraints, we could not test \emph{GPT3.5} on the full wikipedia or full concatenated wikipedia datasets. Instead, we took the largest subset that fit within resource constraints. We evaluated all other models on the full datasets to verify that similar results are obtained. Further details on the experimental procedure are witheld for proprietary reasons.
+
+We evaluate primarily using the previously discussed boundary similarity metric with $n=5$. We also looked at precision and recall which helped us characterize the behavior of each model. Results can be found in Table~\ref{tab:quant_results}. 
+
+We find that ...
+
+Results were also taken with $n=2$ and $n=10$. Full results for both the smaller and larger datasets and all evalutation metrics can be found in the Appendix~\ref{Appendix}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|ccc}
+& Human & Wiki & Wiki-concat \\ \hline
+GPT3.5  & Row 1 Data & Row 1 Data & Row 1 Data \\ 
+Flan-T5  & Row 2 Data & Row 2 Data & Row 2 Data \\ 
+BERTGraph & Row 3 Data & Row 3 Data & Row 3 Data \\ 
+BERT & Row 4 Data & Row 4 Data & Row 4 Data \\
+RandomF0.1& Row 5 Data & Row 5 Data & Row 5 Data \\
+Split5 & Row 6 Data & Row 6 Data & Row 6 Data \\
+\end{tabular}
+\caption{Boundary similarity with $n=5$ for the different models on the human-annotated, Wikipedia, and concatenated Wikipedia datasets.}
+\label{tab:quant_results}
+\end{table}
+
+\subsection{Qualitative Results}
+
+Through manual testing with the human-annotated dataset, we found that \emph{GPT3.5} generally found the boundaries which seemed most reasonable from a human perspective, especially for simple documents. The 
+
+
+BERT segmenters would find reasonable segments, but after the manual gluing and splitting procedure, would often lead to off-by-1 errors.
+
+However, for documents with far more complex documents such as a podcast transcript, or with messy data like tables or artefacts from pdf to text conversions, \emph{GPT3.5} would sometimes return indices with a regular pattern. For example, the GLM might return '$[1,15,22, ..., 76, 79, 82, 85, 88, ..., 184, 187, ...]$'. Often, the pattern would continue far beyond the number of sentences in the input indicating that the model became stuck in a regular pattern. Perhaps better prompt engineering, a more rigorous data-processing procedure or the use of newer models would help, but our current approach was resource constrained and required the ability to pass noisy documents to the model. A more thorough investigation of the logits computed by the model is required to understand how and when this occurs, and how to mitigate it.
+

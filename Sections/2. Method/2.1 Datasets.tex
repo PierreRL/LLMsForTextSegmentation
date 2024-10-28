@@ -1,0 +1,21 @@
+% 2. Method
+% 2.1 Datasets
+\subsection{Datasets}
+
+There are 4 types of datasets used in the experiments in this work: a small human-annotated dataset, a scrape of English wikipedia, a 'concatenated' wikipedia scrape and a synthetic GPT3.5 generated dataset.
+
+\subsubsection{Human-Annotated Dataset}
+
+Lacking the resources to create a large gold standard dataset annotated by humans, this work uses a very small manually segmented dataset of 10 documents. These documents are a mix of news articles, wikipedia articles, and miscellaneous documents such as podcast transcripts and scientific reports. This was intended to represent varying difficulties of segmentation, and provide examples which could be manually inspected to interpret segmenter behaviour.
+
+\subsubsection{Wikipedia Dataset}
+
+A plain text English wikipedia scrape [X] was used articles where headings were delimited by special characters. The articles were then automatically segmented based on headings, and filtered to remove articles with very few segments, too short segments, or too muych punctuation such as tables and figures. This created idealised segments. After this process, there remained approximately 1000 segmented articles.
+
+\subsubsection{Concatenated Wikipedia Dataset}
+
+We concatenated randomly sampled segments from the previous Wikipedia dataset in order to form new (incoherent) articles, with segments drawn from completely different domains. This should, intuitively, easier to segment.
+
+\subsubsection{Synthetic Dataset}
+
+The final dataset used was generated synthetically by GPT-3.5. The source data was a mix of CTC sentinel data [X], UN-Peacekeeping corpus [X] and an internal dataset at Adarga. These documents were segmented by querying OpenAI's API with the model `gpt-3.5-turbo-16k`, using the overlapping prompt schema defined in section \ref{LLM-Based Text Segmentation}. While this dataset does not serve as a point of comparison between GLMs and other methods, as the ground truth is defined by a GLM, it was used to fine-tune an open-source LLM, as described in [X].

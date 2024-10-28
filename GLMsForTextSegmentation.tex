@@ -1,0 +1,73 @@
+%%%%%%%% CS-502 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{amsmath} 
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+\usepackage{hyperref}
+\usepackage{subfiles}
+
+\usepackage[accepted]{cs502}
+
+\icmltitlerunning{Submission and Formatting Instructions for ICML 2021}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Text Segmentation Using Generative Language Models}
+
+\begin{icmlauthorlist}
+\icmlauthor{Pierre Lardet}{}
+\icmlauthor{Maya Shah}{}
+\end{icmlauthorlist}
+
+\vskip 0.5in
+]
+
+\begin{abstract}
+\emph{
+    Topic segmentation using Generative Language Models (GLMs) remains relatively unexplored. Previous methods use lexical or semantic similarity between parts of a document to decide on boundaries, but they lack the long range dependency and vast knowledge contained in GLMs. Here, we propose a new prompting strategy and compare to semantic similarity-based methods. Results show that GLMs can be more effective segmenters than existing methods, but issues remain to be solved before GLMs can be relied upon for topic segmentation.
+}
+\end{abstract}
+
+\section{Introduction}
+
+% 1
+% ---------- Introduction ----------
+\subsection{The Topic Segmentation Problem}
+\subfile{Sections/1. Introduction/1.1 Topic Segmentation Problem}
+\subfile{Sections/1. Introduction/1.2 Related Work}
+
+% 2
+% ---------- Method ----------
+\section{Method}
+\subfile{Sections/2. Method/2.1 Datasets}
+\subfile{Sections/2. Method/2.2 Evaluation}
+\subfile{Sections/2. Method/2.3 LLM-Based Text Segmentation}
+
+% 3. Experiments
+\section{Experiments}\label{Results}
+\subfile{Sections/3. Experiments/3.1 Models}
+\subfile{Sections/3. Experiments/3.2 Results}
+
+% 4. Conclusion
+\section{Conclusion}\label{Conclusion}
+\subfile{Sections/4. Conclusion/Conclusion}
+
+% Bibliography
+\bibliography{references.bib}
+\bibliographystyle{cs502}
+
+
+% Appendix
+
+\appendix
+\section{Appendix}\label{Appendix}
+\subfile{Sections/5. Appendix/5.1 Appendix}
+
+\end{document}
+
