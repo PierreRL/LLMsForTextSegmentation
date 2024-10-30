@@ -2,57 +2,60 @@
 
 \subsection{Quantitative Results}
 
-Models are tested on the human-annotated dataset, the wikipedia dataset, and the concatenated wikipedia dataset. We do not test on the synthetic dataset results would be biased in favor of the generative models which generated the segmentations. Indeed, while performance of the LLMs on the synthetic dataset is far from perfect (<0.5 boundary similarity with $n=2$), it is disproportionately better than other models on the synthetic dataset.
+Models are tested on the human-annotated dataset, the wikipedia dataset, and the concatenated wikipedia dataset. We do not test on the synthetic dataset results would be biased in favor of the generative models which generated the segmentations. Indeed, while performance of the LLMs on the synthetic dataset is far from perfect (less than boundary similarity of 0.5 with $n=2$), it is disproportionately better than other models on the synthetic dataset.
 
 Due to resource constraints, we could not test \emph{GPT3.5} on the full wikipedia or full concatenated wikipedia datasets. Instead, we took the largest subset that fit within resource constraints. We evaluated all other models on the full datasets to verify that similar results are obtained. Further details on the experimental procedure are witheld for proprietary reasons.
 
-We evaluate primarily using the previously discussed boundary similarity metric with $n=2$. We also looked at precision and recall which helped us characterize the behavior of each model. Results can be found in Table~\ref{tab:quant_results} and 
+We evaluate primarily using the previously discussed boundary similarity metric with $n=2$. Results can be seen in Table~\ref{tab:quant_results}. Evaluation was also run with boundary similarity $n=5$, but the metric becomes noisier with higher values of $n$. Indeed, the baselines begin to report better performance with high enough $n$. Full results for both the smaller and larger datasets and all evalutation metrics can be found in the Appendix~\ref{Appendix}.
 
-We find that ...
- 
-Evaluation was also run with boundary similarity $n=5$, but the metric becomes noisier with higher values of $n$ and indeed the baselines begin to report better performance with high enough $n$. Full results for both the smaller and larger datasets and all evalutation metrics can be found in the Appendix~\ref{Appendix}.
+We see that \emph{GPT3.5} outperforms all other models on the human-annotated dataset, the wikipedia dataset, and the synthetic dataset, with the other LLM \emph{FlanT5} coming in second in the same datasets. The close performance between the models on the synthetic dataset implies that \emph{FlanT5} is a good approximation of \emph{GPT3.5} for this task, on boundaries generate by \emph{GPT3.5}. However, the biggets performance gap is on the human-annotated dataset. Although this dataset is small, it represents a meaningful distribution shift and, unsurprisingly, the fine-tuned model is unable to generalize as well as the base model.
+
+Interestingly, we see that both BERT-based models are superior in the supposedly easier task posed by the concatenated wikipedia dataset. We theorise that these models are better at finding clear boundaries between different domains, but struggle with more nuanced segment boundaries found in a news article, for example. Whereas, the LLMs are better at finding more nuanced segments that a human might produce, but are not significantly better at finding these easier boundaries.
 
 \begin{table}[ht]
-\centering
-\begin{tabular}{@{}lrrrr@{}}
-\toprule
-& Human & Wiki & Conc-Wiki & Synthetic \\ \midrule
-\it GPT3.5  & \bf 0.38 & \bf 0.25 & 0.29 & \bf 0.35 \\ 
-\it FlanT5  & 0.25 & 0.24 & 0.41 & 0.33 \\ 
-\it BERTGraph & 0.20 & 0.15 & 0.45 & 0.21 \\ 
-\it BERT & 0.18 & 0.09 & \bf 0.46 & 0.18 \\
-\it RandomF0.1& 0.09 & 0.11 & 0.10 & 0.10 \\
-\it Split5 & 0.13 & 0.19 & 0.19 & 0.23 \\
-\bottomrule
-\end{tabular}
-\caption{Boundary similarity with $n=2$ for each model and the human, wiki, concatenated wiki and synthetic datasets.}
-\label{tab:quant_results}
-\end{table}
+    \centering
+    \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    & Human & Wiki & Conc-Wiki & Synthetic \\ \midrule
+    \it GPT3.5  & \bf 0.38 & \bf 0.25 & 0.29 & \bf 0.35 \\ 
+    \it FlanT5  & 0.25 & 0.24 & 0.41 & 0.33 \\ 
+    \midrule
+    \it BERTGraph & 0.20 & 0.15 & 0.45 & 0.21 \\ 
+    \it BERT & 0.18 & 0.09 & \bf 0.46 & 0.18 \\
+    \it RandomF0.1& 0.09 & 0.11 & 0.10 & 0.10 \\
+    \it Split5 & 0.13 & 0.19 & 0.19 & 0.23 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Boundary similarity scores with $n=2$ for each model and the human, wiki, concatenated wiki and synthetic datasets.}\label{tab:quant_results}
+    \end{table}
+
+We also looked at precision and recall to better characterize the behavior of each model. Results can be seen in Table~\ref{tab:quant_results_precision_recall}.\ \emph{GPT3.5} has the highest precision and recall in the human-annotated dataset and the highest recall on both the wiki and concatenated wiki datasets. This property of having high recall is true in general for the LLMs, even in the concatenated wiki dataset where the BERT models have higher overall boundary similarity. By contrast, precision scores are closer in general and much better for the BERT models on the concatenated wiki dataset. This suggests that, in general, the BERT models are more hesitant in placing boundaries, but when they do, they are more likely to be correct. It should be noted that this behaviour in both the LLMs and BERT models is subject to the prompt engineering and segment processing procedures used.
 
 \begin{table}[ht]
     \centering
     \begin{tabular}{@{}lrrrrrr@{}}
     \toprule
     & \multicolumn{2}{c}{Human} & \multicolumn{2}{c}{Wiki} & \multicolumn{2}{c}{Conc-Wiki} \\
-    & P & R & P & R & P & R \\
+    & BP & BR & BP & BR & BP & BR \\
     \midrule
     \it GPT3.5 & \bf 0.51 & \bf 0.60 & 0.36 & \bf 0.55 & 0.42 & \bf 0.63 \\
-    \it FlanT5  & 0.38 & 0.46 & \bf 0.43 & 0.37 & 0.65 & \bf 0.63 \\
+    \it FlanT5 & 0.38 & 0.46 & \bf 0.43 & 0.37 & 0.65 & \bf 0.63 \\
+    \midrule
     \it BERTGraph & 0.47 & 0.25 & 0.39 & 0.21 & 0.79 & 0.54 \\
     \it BERT & 0.33 & 0.39 & 0.23 & 0.37 & \bf 0.91 & 0.50 \\
     \it RandomF0.1 & 0.16 & 0.21 & 0.34 & 0.16 & 0.20 & 0.16 \\
     \it Split5 & 0.17 & 0.48 & 0.33 & 0.39 & 0.25 & 0.52 \\
     \bottomrule
     \end{tabular}
-    \caption{Boundary similarity precision (P) and recall (R) with $n=2$ for each model and the human, wiki, and concatenated wiki datasets.}\label{tab:quant_results_precision_recall}
+    \caption{Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and the human, wiki, and concatenated wiki datasets.}\label{tab:quant_results_precision_recall}
    
 \end{table}
     
 
-\subsection{Qualitative Results}
+\subsection{Qualitative Evaluation}
 
-Limited manual testing and inspection of the segmentations produced by the models were also conducted, both during prompt engineering and after the models were trained.
+Limited manual testing and inspection of the segmentations produced by the models was also conducted, both during prompt engineering and after the models were trained.
 
 Through manual inspection of segmentations with the human-annotated dataset, we found that \emph{GPT3.5} generally found the boundaries which seemed reasonable from a human perspective, especially for simple documents like short news articles. The fine-tuned \emph{FlanT5} model imitated this behavior, but was less consistent. BERT segmenters would find reasonable segments, but after the manual gluing and splitting procedure, would often lead to off-by-1 errors.
 
-For documents with far more complex documents such as a podcast transcript, or with messy data like tables or artefacts from pdf to text conversions, \emph{GPT3.5} would sometimes return indices with a regular pattern. For example, the GLM might return '$[1,15,22, \ldots, 76, 79, 82, 85, 88, \ldots, 184, 187, \ldots]$'. Often, the pattern would continue far beyond the number of sentences in the input indicating that the model became stuck in a regular pattern. Perhaps better prompt engineering, a more rigorous data-processing procedure or the use of newer models would help, but our current approach was resource constrained and required the ability to pass noisy documents to the model. A more thorough investigation of the logits computed by the model is required to understand how and when this occurs, and how to mitigate it.
+For documents with far more complex documents such as a podcast transcript, or with messy data like tables or artefacts from pdf to text conversions, \emph{GPT3.5} would sometimes return indices with a regular pattern. For example, the LLM might return '$[1,15,22, \ldots, 76, 79, 82, 85, 88, \ldots, 184, 187, \ldots]$'. Often, the pattern would continue far beyond the number of sentences in the input indicating that the model became stuck in a regular pattern. Perhaps better prompt engineering, a more rigorous data-processing procedure, the use of newer models would help or the use of better generation parameters, but our current approach was resource constrained and required the ability to pass noisy documents to the model. A more thorough investigation of the logits computed by the model is required to understand how and when this occurs, and how to mitigate it.
