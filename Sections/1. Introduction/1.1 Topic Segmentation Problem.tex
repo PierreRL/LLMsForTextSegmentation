@@ -1,9 +1,10 @@
 % 1. Introduction
-% 1.1 The Topic Segmentation Problem
+% 1.1 Topic Segmentation Task Definition
 
+\subsection{Topic Segmentation Task Definition}
 Topic segmentation is the problem of dividing a string of text into constituent parts or ‘segments’. Each segment should be semantically self-contained such that it is about one thing. The precise definition of a segment should be dependent upon the specific use cases. For this work, segment boundaries shall always lie on sentence boundaries.
 
-We can think of this as a binary classification task.  Given a list of input sentences $S$, of length $n$, the model must decide whether there exists a segment boundary between each pair of adjacent sentences. There are $n-1$ possible boundaries, and therefore our solution space is $2^{n-1}$.  Formally, the model must find a mapping $f$ from the list of sentences to a binary vector of length $n-1$:
+We can interpret segmentation as a binary classification task.  Given a list of input sentences $S$, of length $n$, the model must decide whether there exists a segment boundary between each pair of adjacent sentences. There are $n-1$ possible boundaries, and therefore our solution space is $2^{n-1}$.  Formally, the model must find a mapping $f$ from the list of sentences to a binary vector of length $n-1$:
 \(
      f(S) = \textbf{y} 
 \)
@@ -12,6 +13,6 @@ We can think of this as a binary classification task.  Given a list of input sen
 
 Relative to generative tasks such as summarisation, the space of possible solutions is much smaller, but the problem remains subjective as where a boundary should lie can be ambiguous. Frequently, humans cannot agree on a correct solution \cite{TextTiling}.
 
-This task can be important as a processing step before some other NLP task, or can be important in its own right. One might use segments to generate a contents page for a long document, or individual summaries of segments within a document, or generate titles for each segment. Other tasks such as information retrieval, long-document summarisation and classification, can all benefit from first being broken down by topic. For many open source or resource-constrained models, context windows limit the size of input for such tasks which can be constraining \cite{FlanT5}. Although context windows can be increased \cite{ExtendingContextWindows} and newer models are consistently increasing context lengths, this alone does not fix all problems as LLMs do not fully utilise long context windows \cite{EffectOfLongContextWindows} \cite{ContextAffectsFactual}. 
+
 
  

@@ -1,0 +1,10 @@
+% 1.2 Motivation
+\subsection{Motivation}
+
+Topic segmentation can be important as a processing step before some other NLP task, or can be important in its own right. 
+
+Tasks such as information retrieval, long-document summarisation and classification can all benefit from first being broken down by topic. For many open source or resource-constrained models, context windows limit the size of input for such tasks which can be constraining, especially for smaller models~\cite{FlanT5}. Although context windows can be increased~\cite{ExtendingContextWindows} and newer models are consistently increasing context lengths with ever-more-powerful GPUs, this alone does not fix all problems as LLMs do not fully utilise long context windows~\cite{EffectOfLongContextWindows}~\cite{ContextAffectsFactual}. 
+
+Furthermore, segmentation can be imporant for its own sake. One might use segments to generate a contents page for a long document, individual summaries of segments within a document or generate titles for each segment. Alternatively, one might use segmentation to break down a long document into smaller, more manageable parts for a user to read, or as a citation for RAG in which the model must generate an answer to a question based on a segment of text.
+
+Our application at Adarga is to use topic segmentation as both a pre-processing step for a document understanding pipeline and as an important step in its own right. This pipeline is used to extract structured information from unstructured text, and the segmentation step is used to break down the document into smaller, more manageable parts. When presented to a user, only semantically self-contained sections of a long document are presented to a user, which can be more easily understood and acted upon.
