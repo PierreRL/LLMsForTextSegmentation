@@ -1,45 +1,5 @@
 % 3.2 Results
 
-% \begin{table*}[ht]
-%     \centering
-%     \begin{minipage}[t]{0.48\textwidth}
-%         \centering
-%         \begin{tabular}{@{}lrrrr@{}}
-%         \toprule
-%         & Human & Wiki & Conc-Wiki & Synth \\ \midrule
-%         \it GPT3.5  & \bf 0.38 & \bf 0.25 & 0.29 & \bf 0.35 \\ 
-%         \it FlanT5  & 0.25 & 0.24 & 0.41 & 0.33 \\ 
-%         \midrule
-%         \it BERTG & 0.20 & 0.15 & 0.45 & 0.21 \\ 
-%         \it BERT & 0.18 & 0.09 & \bf 0.46 & 0.18 \\
-%         \it Frac0.1& 0.09 & 0.11 & 0.10 & 0.10 \\
-%         \it Split5 & 0.13 & 0.19 & 0.19 & 0.23 \\
-%         \bottomrule
-%         \end{tabular}
-%         \caption{Boundary similarity scores with $n=2$ for each model and dataset.}
-%         \label{tab:quant_results}
-%     \end{minipage}%
-%     \hfill
-%     \begin{minipage}[t]{0.48\textwidth}
-%         \centering
-%         \begin{tabular}{@{}lrrrrrr@{}}
-%         \toprule
-%         & \multicolumn{2}{c}{Human} & \multicolumn{2}{c}{Wiki} & \multicolumn{2}{c}{Conc-Wiki} \\
-%         & BP & BR & BP & BR & BP & BR \\
-%         \midrule
-%         \it GPT3.5 & \bf 0.51 & \bf 0.60 & 0.36 & \bf 0.55 & 0.42 & \bf 0.63 \\
-%         \it FlanT5 & 0.38 & 0.46 & \bf 0.43 & 0.37 & 0.65 & \bf 0.63 \\
-%         \midrule
-%         \it BERTG & 0.47 & 0.25 & 0.39 & 0.21 & 0.79 & 0.54 \\
-%         \it BERT & 0.33 & 0.39 & 0.23 & 0.37 & \bf 0.91 & 0.50 \\
-%         \it Frac0.1 & 0.16 & 0.21 & 0.34 & 0.16 & 0.20 & 0.16 \\
-%         \it Split5 & 0.17 & 0.48 & 0.33 & 0.39 & 0.25 & 0.52 \\
-%         \bottomrule
-%         \end{tabular}
-%         \caption{Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and dataset.}
-%         \label{tab:quant_results_precision_recall}
-%     \end{minipage}
-% \end{table*}
 \begin{table*}[ht]
     \centering
     \begin{tabular}{@{}lcccc@{\hspace{2em}}ccccc@{\hspace{0.2em}}c@{}}
@@ -58,7 +18,7 @@
     \it Split5  & 0.13 & 0.19 & 0.19 & 0.23 & 0.17 & 0.48 & 0.33 & 0.39 & 0.25 & 0.52 \\ 
     \bottomrule
     \end{tabular}
-    \caption{Results for Boundary Similarity Scores and Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and dataset. Best results for each metric are highlighted in \bf bold.}~\label{tab:combined_results}
+    \caption{Results for Boundary Similarity, Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and dataset. Best results for each metric are highlighted in \bf bold.}~\label{tab:combined_results}
 \end{table*}
 
 

@@ -15,7 +15,7 @@ Our existing method generates a sequence of sentence similarities using sentence
 
 \subsubsection{GPT-3.5}
 
-OpenAI's \texttt{gpt-3.5-turbo-16k} model was queried using the prompting and segment validation strategy defined in Section 2~\ref{Prompting Strategy}. We call this model \emph{GPT3.5}. We used the largest model available to us, which is the 16k token context window. Note that queries were made during the summer of 2023;the cheapest tier of model available from Open-AI has increased in capabilities since then. Given the nature of the task, we choose to use deterministic outputs from the model rather than sampling by setting topk $=1$. We are looking for the best possible segmentations rather than a variety of possible segmentations. This also helps with reproducibility of segmentations.
+OpenAI's \texttt{gpt-3.5-turbo-16k} model was queried using the prompting and segment validation strategy defined in Section 2~\ref{Prompting Strategy}. We call this model \emph{GPT3.5}. We used the largest model available to us, which was the 16k token context window. Note that queries were made during the summer of 2023; the cheapest tier of model available from Open-AI has increased in capabilities since then. Given the nature of the task, we choose to use deterministic outputs from the model rather than sampling by setting topk $=1$. We are looking for the best possible segmentations rather than a variety of possible segmentations. This also helps with reproducibility of segmentations.
 
 \subsubsection{Flan-T5-Finetuned}\label{FlanT5}
 

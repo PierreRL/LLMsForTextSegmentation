@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.15)  27 DEC 2024 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.15)  27 DEC 2024 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,14 +573,14 @@ Package pdftex.def Info: assets/diagram.png  used on input line 4.
 [4 <./assets/diagram.png>]) (./Sections/3. Experiments/3.1 Models.tex
 
 ) (./Sections/3. Experiments/3.2 Results.tex
-Underfull \hbox (badness 1859) in paragraph at lines 67--68
+Underfull \hbox (badness 1859) in paragraph at lines 27--28
 \T1/ptm/m/n/10.95 (+20) Models were tested on the human-annotated
  []
 
 
 
 [5]
-Underfull \hbox (badness 1019) in paragraph at lines 73--74
+Underfull \hbox (badness 1019) in paragraph at lines 33--34
 \T1/ptm/m/n/10.95 (+20) LLM \T1/ptm/m/it/10.95 (+20) FlanT5 \T1/ptm/m/n/10.95 (+20) com-ing in sec-ond in the same
  []
 
@@ -589,47 +589,47 @@ Underfull \hbox (badness 1019) in paragraph at lines 73--74
 
 
 [6])
-Underfull \hbox (badness 1715) in paragraph at lines 89--94
+Underfull \hbox (badness 1715) in paragraph at lines 49--94
 []\T1/ptm/m/n/10.95 (+20) For doc-u-ments with far more com-plex or
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 89--94
+Underfull \hbox (badness 5022) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) nu-anced text such as a pod-cast tran-script,
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 89--94
+Underfull \hbox (badness 2698) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) or with messy data like ta-bles or arte-facts
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 89--94
+Underfull \hbox (badness 1033) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) from pdf to text con-ver-sions, \T1/ptm/m/it/10.95 (+20) GPT3.5 \T1/ptm/m/n/10.95 (+20) would
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 89--94
+Underfull \hbox (badness 1577) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) some-times re-turn in-dices with a reg-u-lar pat-
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 89--94
+Underfull \hbox (badness 1881) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) tern. For ex-am-ple, the LLM might re-turn
  []
 
 
-Overfull \hbox (9.16502pt too wide) in paragraph at lines 89--94
+Overfull \hbox (9.16502pt too wide) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (-20) '$\OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 15\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 22\OML/cmm/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 76\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 79\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 82\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 85\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 88\OML/cmm/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 184\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 187\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ]$\T1/ptm/m/n/10.95 (-20) '.
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 89--94
+Underfull \hbox (badness 3078) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) bet-ter prompt en-gi-neer-ing, a more rig-or-ous
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 89--94
+Underfull \hbox (badness 1939) in paragraph at lines 49--94
 \T1/ptm/m/n/10.95 (+20) data-processing pro-ce-dure, the use of newer
  []
 
@@ -641,7 +641,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ) (./Sections/5. Appendices/5.2 Limitations.tex) (./Sections/5. Appendices/5.3 Acknowledgements.tex)
 
 [7] (tex_build/main.bbl
-Underfull \hbox (badness 2486) in paragraph at lines 16--27
+Underfull \hbox (badness 2486) in paragraph at lines 10--13
 \T1/ptm/m/n/10 (+20) Askell, Sand-hini Agar-wal, Ariel Herbert-Voss,
  []
 
@@ -668,15 +668,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FC307A485F6B7FE7E0397BC47EEEC353;3672.
  ) 
 Here is how much of TeX's memory you used:
- 16941 strings out of 473579
- 269004 string characters out of 5728233
- 709395 words of memory out of 5000000
+ 16935 strings out of 473579
+ 268947 string characters out of 5728233
+ 709385 words of memory out of 5000000
  39058 multiletter control sequences out of 15000+600000
- 626828 words of font info for 359 fonts, out of 8000000 for 9000
+ 626378 words of font info for 355 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,14n,93p,1237b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,14n,93p,1237b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tex_build/main.pdf (10 pages, 278678 bytes).
+Output written on tex_build/main.pdf (10 pages, 278912 bytes).
 PDF statistics:
  388 PDF objects out of 1000 (max. 8388607)
  351 compressed objects within 4 object streams

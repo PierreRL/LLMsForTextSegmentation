@@ -2,7 +2,7 @@
 % 1.1 Topic Segmentation Task Definition
 
 \subsection{Topic Segmentation Task Definition}
-Topic segmentation is the problem of dividing a string of text into constituent parts or ‘segments’. Each segment should be semantically self-contained such that it is about one thing. The precise definition of a segment should be dependent upon the specific use cases. For this work, segment boundaries shall always lie on sentence boundaries.
+Topic segmentation is the problem of dividing a string of text into constituent parts or ‘segments’. Each segment should be semantically self-contained such that it is about one thing. The precise definition of a segment should be dependent upon the specific use cases. For this work, segment boundaries always lie on sentence boundaries.
 
 We can interpret segmentation as a binary classification task.  Given a list of input sentences $S$, of length $n$, the model must decide whether there exists a segment boundary between each pair of adjacent sentences. There are $n-1$ possible boundaries, and therefore the solution space is $2^{n-1}$.  Formally, the model must find a mapping $f$ from the list of sentences to a binary vector of length $n-1$:
 \(
