@@ -1,0 +1,214 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Badjatiya et~al.(2018)Badjatiya, Kurisinkel, Gupta, and
+  Varma]{CNNFeaturesLSTMAttention}
+Badjatiya, P., Kurisinkel, L.~J., Gupta, M., and Varma, V.
+\newblock Attention-based neural text segmentation.
+\newblock In Pasi, G., Piwowarski, B., Azzopardi, L., and Hanbury, A. (eds.),
+  \emph{Advances in Information Retrieval}, pp.\  180--193, Cham, 2018.
+  Springer International Publishing.
+\newblock ISBN 978-3-319-76941-7.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan,
+  Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess,
+  Clark, Berner, McCandlish, Radford, Sutskever, and Amodei]{FewShotLearners}
+Brown, T.~B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P.,
+  Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S.,
+  Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler,
+  D.~M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray,
+  S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever,
+  I., and Amodei, D.
+\newblock Language models are few-shot learners.
+\newblock In \emph{Proceedings of the 34th International Conference on Neural
+  Information Processing Systems}, NIPS '20, Red Hook, NY, USA, 2020. Curran
+  Associates Inc.
+\newblock ISBN 9781713829546.
+
+\bibitem[Chen et~al.(2023)Chen, Wong, Chen, and Tian]{ExtendingContextWindows}
+Chen, S., Wong, S., Chen, L., and Tian, Y.
+\newblock Extending context window of large language models via positional
+  interpolation, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.15595}.
+
+\bibitem[Chung et~al.(2024)Chung, Hou, Longpre, Zoph, Tay, Fedus, Li, Wang,
+  Dehghani, Brahma, Webson, Gu, Dai, Suzgun, Chen, Chowdhery, Castro{-}Ros,
+  Pellat, Robinson, Valter, Narang, Mishra, Yu, Zhao, Huang, Dai, Yu, Petrov,
+  Chi, Dean, Devlin, Roberts, Zhou, Le, and Wei]{FlanT5}
+Chung, H.~W., Hou, L., Longpre, S., Zoph, B., Tay, Y., Fedus, W., Li, Y., Wang,
+  X., Dehghani, M., Brahma, S., Webson, A., Gu, S.~S., Dai, Z., Suzgun, M.,
+  Chen, X., Chowdhery, A., Castro{-}Ros, A., Pellat, M., Robinson, K., Valter,
+  D., Narang, S., Mishra, G., Yu, A., Zhao, V.~Y., Huang, Y., Dai, A.~M., Yu,
+  H., Petrov, S., Chi, E.~H., Dean, J., Devlin, J., Roberts, A., Zhou, D., Le,
+  Q.~V., and Wei, J.
+\newblock Scaling instruction-finetuned language models.
+\newblock \emph{J. Mach. Learn. Res.}, 25:\penalty0 70:1--70:53, 2024.
+\newblock URL \url{https://jmlr.org/papers/v25/23-0870.html}.
+
+\bibitem[Costacurta(2023)]{MasimilianoSegmenter}
+Costacurta, M.
+\newblock Text tiling done right: Building solid foundations for your personal
+  llm, 2023.
+
+\bibitem[Eisenstein(2009)]{lexical2}
+Eisenstein, J.
+\newblock Hierarchical text segmentation from multi-scale lexical cohesion.
+\newblock In Ostendorf, M., Collins, M., Narayanan, S., Oard, D.~W., and
+  Vanderwende, L. (eds.), \emph{Proceedings of Human Language Technologies: The
+  2009 Annual Conference of the North {A}merican Chapter of the Association for
+  Computational Linguistics}, pp.\  353--361, Boulder, Colorado, June 2009.
+  Association for Computational Linguistics.
+\newblock URL \url{https://aclanthology.org/N09-1040}.
+
+\bibitem[Feng et~al.(2021)Feng, Feng, Qin, Qin, and Liu]{DialoGPT}
+Feng, X., Feng, X., Qin, L., Qin, B., and Liu, T.
+\newblock Language model as an annotator: Exploring {D}ialo{GPT} for dialogue
+  summarization.
+\newblock In Zong, C., Xia, F., Li, W., and Navigli, R. (eds.),
+  \emph{Proceedings of the 59th Annual Meeting of the Association for
+  Computational Linguistics and the 11th International Joint Conference on
+  Natural Language Processing (Volume 1: Long Papers)}, pp.\  1479--1491,
+  Online, August 2021. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2021.acl-long.117}.
+\newblock URL \url{https://aclanthology.org/2021.acl-long.117}.
+
+\bibitem[Fournier(2013)]{fournier-2013-B}
+Fournier, C.
+\newblock Evaluating text segmentation using boundary edit distance.
+\newblock In Schuetze, H., Fung, P., and Poesio, M. (eds.), \emph{Proceedings
+  of the 51st Annual Meeting of the Association for Computational Linguistics
+  (Volume 1: Long Papers)}, pp.\  1702--1712, Sofia, Bulgaria, August 2013.
+  Association for Computational Linguistics.
+\newblock URL \url{https://aclanthology.org/P13-1167}.
+
+\bibitem[Galley et~al.(2003)Galley, McKeown, Fosler-Lussier, and
+  Jing]{lexical1}
+Galley, M., McKeown, K.~R., Fosler-Lussier, E., and Jing, H.
+\newblock Discourse segmentation of multi-party conversation.
+\newblock In \emph{Proceedings of the 41st Annual Meeting of the Association
+  for Computational Linguistics}, pp.\  562--569, Sapporo, Japan, July 2003.
+  Association for Computational Linguistics.
+\newblock \doi{10.3115/1075096.1075167}.
+\newblock URL \url{https://aclanthology.org/P03-1071}.
+
+\bibitem[Glava~s \& Somasundaran(2020)Glava~s and
+  Somasundaran]{TwoLevelTransformerSoftmax}
+Glava~s, G. and Somasundaran, S.
+\newblock Two-level transformer and auxiliary coherence modeling for improved
+  text segmentation.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  34:\penalty0 7797--7804, 04 2020.
+\newblock \doi{10.1609/aaai.v34i05.6284}.
+
+\bibitem[Hearst(1997)]{TextTiling}
+Hearst, M.~A.
+\newblock Texttiling: segmenting text into multi-paragraph subtopic passages.
+\newblock \emph{Comput. Linguist.}, 23\penalty0 (1):\penalty0 33–64, mar
+  1997.
+\newblock ISSN 0891-2017.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{LORA}
+Hu, E.~J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., and
+  Chen, W.
+\newblock Lo{RA}: Low-rank adaptation of large language models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=nZeVKeeFYf9}.
+
+\bibitem[Koshorek et~al.(2018)Koshorek, Cohen, Mor, Rotman, and
+  Berant]{HierarchicalBiLSTM}
+Koshorek, O., Cohen, A., Mor, N., Rotman, M., and Berant, J.
+\newblock Text segmentation as a supervised learning task.
+\newblock In Walker, M., Ji, H., and Stent, A. (eds.), \emph{Proceedings of the
+  2018 Conference of the North {A}merican Chapter of the Association for
+  Computational Linguistics: Human Language Technologies, Volume 2 (Short
+  Papers)}, pp.\  469--473, New Orleans, Louisiana, June 2018. Association for
+  Computational Linguistics.
+\newblock \doi{10.18653/v1/N18-2075}.
+\newblock URL \url{https://aclanthology.org/N18-2075}.
+
+\bibitem[Liu et~al.(2024)Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, and
+  Liang]{EffectOfLongContextWindows}
+Liu, N.~F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F.,
+  and Liang, P.
+\newblock Lost in the middle: How language models use long contexts.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  12:\penalty0 157--173, 2024.
+\newblock \doi{10.1162/tacl_a_00638}.
+\newblock URL \url{https://aclanthology.org/2024.tacl-1.9}.
+
+\bibitem[Lo et~al.(2021)Lo, Jin, Tan, Liu, Du, and
+  Buntine]{TwoLevelTransformerPretrained}
+Lo, K., Jin, Y., Tan, W., Liu, M., Du, L., and Buntine, W.
+\newblock Transformer over pre-trained transformer for neural text segmentation
+  with enhanced topic coherence.
+\newblock In Moens, M.-F., Huang, X., Specia, L., and Yih, S. W.-t. (eds.),
+  \emph{Findings of the Association for Computational Linguistics: EMNLP 2021},
+  pp.\  3334--3340, Punta Cana, Dominican Republic, November 2021. Association
+  for Computational Linguistics.
+\newblock \doi{10.18653/v1/2021.findings-emnlp.283}.
+\newblock URL \url{https://aclanthology.org/2021.findings-emnlp.283}.
+
+\bibitem[Lukasik et~al.(2020)Lukasik, Dadachev, Papineni, and
+  Sim{\~o}es]{CrossAttentionHierarchical}
+Lukasik, M., Dadachev, B., Papineni, K., and Sim{\~o}es, G.
+\newblock Text segmentation by cross segment attention.
+\newblock In Webber, B., Cohn, T., He, Y., and Liu, Y. (eds.),
+  \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural
+  Language Processing (EMNLP)}, pp.\  4707--4716, Online, November 2020.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2020.emnlp-main.380}.
+\newblock URL \url{https://aclanthology.org/2020.emnlp-main.380}.
+
+\bibitem[Petroni et~al.(2020)Petroni, Lewis, Piktus, Rocktäschel, Wu, Miller,
+  and Riedel]{ContextAffectsFactual}
+Petroni, F., Lewis, P., Piktus, A., Rocktäschel, T., Wu, Y., Miller, A., and
+  Riedel, S.
+\newblock How context affects language models' factual predictions.
+\newblock 06 2020.
+
+\bibitem[Pevzner \& Hearst(2002)Pevzner and Hearst]{HearstW2002}
+Pevzner, L. and Hearst, M.~A.
+\newblock A critique and improvement of an evaluation metric for text
+  segmentation.
+\newblock \emph{Computational Linguistics}, 28\penalty0 (1):\penalty0 19--36,
+  2002.
+\newblock \doi{10.1162/089120102317341756}.
+\newblock URL \url{https://aclanthology.org/J02-1002}.
+
+\bibitem[Reimers \& Gurevych(2019)Reimers and Gurevych]{SentenceBERT}
+Reimers, N. and Gurevych, I.
+\newblock Sentence-{BERT}: Sentence embeddings using {S}iamese {BERT}-networks.
+\newblock In Inui, K., Jiang, J., Ng, V., and Wan, X. (eds.), \emph{Proceedings
+  of the 2019 Conference on Empirical Methods in Natural Language Processing
+  and the 9th International Joint Conference on Natural Language Processing
+  (EMNLP-IJCNLP)}, pp.\  3982--3992, Hong Kong, China, November 2019.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/D19-1410}.
+\newblock URL \url{https://aclanthology.org/D19-1410}.
+
+\bibitem[Wang et~al.(2016)Wang, Qian, Soong, He, and Zhao]{BiLSTM}
+Wang, P., Qian, Y., Soong, F.~K., He, L., and Zhao, H.
+\newblock Learning distributed word representations for bidirectional {LSTM}
+  recurrent neural network.
+\newblock In Knight, K., Nenkova, A., and Rambow, O. (eds.), \emph{Proceedings
+  of the 2016 Conference of the North {A}merican Chapter of the Association for
+  Computational Linguistics: Human Language Technologies}, pp.\  527--533, San
+  Diego, California, June 2016. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/N16-1064}.
+\newblock URL \url{https://aclanthology.org/N16-1064}.
+
+\bibitem[Xing(2024)]{XingThesis}
+Xing, L.
+\newblock \emph{Versatile neural approaches to more accurate and robust topic
+  segmentation}.
+\newblock PhD thesis, University of British Columbia, 2024.
+\newblock URL
+  \url{https://open.library.ubc.ca/collections/ubctheses/24/items/1.0440128}.
+
+\end{thebibliography}

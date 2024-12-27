@@ -1,11 +1,5 @@
 % 2. Method
 
-\begin{figure*}[ht]
-    \includegraphics[width=\textwidth]{assets/diagram.png}
-    \caption{The overlapping and recursive prompting strategy for segmentation. In (a), a long document is split into overlapping sections with sentence boundaries enumerated. In (b), each section is segmented by the LLM. In (c), the segments are joined. Finally, in (d), each segment is validated to ensure it is not too long or too short. Segments that are too short are glued to neighbouring segments, and segments that are too long are recursively segmented.}~\label{fig:diagram}
-\end{figure*}
-
-
 \subsection{LLM-Based Text Segmentation}\label{LLM-Based Text Segmentation}
 
 % 2.3 LLM-Based Text Segmentation
@@ -20,7 +14,7 @@ We first annotate the text with indices between each sentence. Here is an exampl
 
 We add a system prompt which describes the segmentation task, desired output format and primes the model to be a talented linguist. We also add a variety of short examples in line with the few-shot prompting technique~\citep{FewShotLearners} which improved performance. This did not necessarily reflect the fact that the LLM learned how to segment better. Instead, through manual testing, we suspect that it learned the ideal segment length and amount of information that should be contained within a segment, which was implicitly contained in the few-shot prompt (and also the testing datasets, therefore increasing performance). This suggests that different implicit definitions of a segment could be imposed by a few-shot prompt to a LLM, dependent upon use case.
 
-The full method is shown in Figure~\ref{fig:diagram} example prompt can be found in Appendix~\ref{Prompting Strategy}.
+An example prompt can be found in Appendix~\ref{Prompting Strategy}.
 
 \subsubsection{Overlapping Prompts}
 

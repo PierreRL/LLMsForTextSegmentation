@@ -1,0 +1,94 @@
+\relax 
+\bibstyle{acl_natbib}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{TextTiling}
+\citation{FlanT5}
+\citation{ExtendingContextWindows}
+\citation{EffectOfLongContextWindows}
+\citation{ContextAffectsFactual}
+\citation{XingThesis}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Topic Segmentation Task Definition}{1}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Motivation}{1}{subsection.1.2}\protected@file@percent }
+\citation{TextTiling}
+\citation{lexical1,lexical2}
+\citation{SentenceBERT}
+\citation{BiLSTM}
+\citation{CrossAttentionHierarchical}
+\citation{HierarchicalBiLSTM,CNNFeaturesLSTMAttention}
+\citation{TwoLevelTransformerSoftmax,TwoLevelTransformerPretrained}
+\citation{DialoGPT}
+\citation{XingThesis}
+\citation{XingThesis}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Related Work}{2}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Method}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Datasets}{2}{subsection.2.1}\protected@file@percent }
+\citation{fournier-2013-B}
+\citation{HearstW2002}
+\citation{fournier-2013-B}
+\citation{XingThesis}
+\citation{XingThesis}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Human-Annotated Dataset}{3}{subsubsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Wikipedia Dataset}{3}{subsubsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Concatenated Wikipedia Dataset}{3}{subsubsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Synthetic Dataset}{3}{subsubsection.2.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Evaluation}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}LLM-Based Text Segmentation}{3}{subsection.2.3}\protected@file@percent }
+\newlabel{LLM-Based Text Segmentation}{{2.3}{3}{LLM-Based Text Segmentation}{subsection.2.3}{}}
+\citation{FewShotLearners}
+\citation{XingThesis}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The overlapping and recursive prompting strategy for segmentation. In (a), a long document is split into overlapping sections with sentence boundaries enumerated. In (b), each section is segmented by the LLM. In (c), the segments are joined. Finally, in (d), each segment is validated to ensure it is not too long or too short. Segments that are too short are glued to neighbouring segments, and segments that are too long are recursively segmented.}}{4}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:diagram}{{1}{4}{The overlapping and recursive prompting strategy for segmentation. In (a), a long document is split into overlapping sections with sentence boundaries enumerated. In (b), each section is segmented by the LLM. In (c), the segments are joined. Finally, in (d), each segment is validated to ensure it is not too long or too short. Segments that are too short are glued to neighbouring segments, and segments that are too long are recursively segmented}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Prompting Method}{4}{subsubsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Overlapping Prompts}{4}{subsubsection.2.3.2}\protected@file@percent }
+\citation{SentenceBERT}
+\citation{MasimilianoSegmenter}
+\citation{FlanT5}
+\citation{LORA}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Segment Validation}{5}{subsubsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experiments}{5}{section.3}\protected@file@percent }
+\newlabel{Results}{{3}{5}{Experiments}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Models}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Baselines}{5}{subsubsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}BERT Segmenter}{5}{subsubsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}BERT-Graph Segmenter}{5}{subsubsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}GPT-3.5}{5}{subsubsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Flan-T5-Finetuned}{5}{subsubsection.3.1.5}\protected@file@percent }
+\newlabel{FlanT5}{{3.1.5}{5}{Flan-T5-Finetuned}{subsubsection.3.1.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Quantitative Results}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Results for Boundary Similarity Scores and Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and dataset. Best results for each metric are highlighted in \bf  bold.}}{6}{table.caption.2}\protected@file@percent }
+\newlabel{tab:combined_results}{{1}{6}{Results for Boundary Similarity Scores and Boundary Precision (BP) and Recall (BR) with $n=2$ for each model and dataset. Best results for each metric are highlighted in \bf bold}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Qualitative Evaluation}{6}{subsection.3.3}\protected@file@percent }
+\citation{XingThesis}
+\citation{XingThesis}
+\citation{XingThesis}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{7}{section.4}\protected@file@percent }
+\newlabel{Conclusion}{{4}{7}{Conclusion}{section.4}{}}
+\bibdata{custom}
+\bibcite{CNNFeaturesLSTMAttention}{{1}{2018}{{Badjatiya et~al.}}{{Badjatiya, Kurisinkel, Gupta, and Varma}}}
+\bibcite{FewShotLearners}{{2}{2020}{{Brown et~al.}}{{Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and Amodei}}}
+\bibcite{ExtendingContextWindows}{{3}{2023}{{Chen et~al.}}{{Chen, Wong, Chen, and Tian}}}
+\bibcite{FlanT5}{{4}{2024}{{Chung et~al.}}{{Chung, Hou, Longpre, Zoph, Tay, Fedus, Li, Wang, Dehghani, Brahma, Webson, Gu, Dai, Suzgun, Chen, Chowdhery, Castro{-}Ros, Pellat, Robinson, Valter, Narang, Mishra, Yu, Zhao, Huang, Dai, Yu, Petrov, Chi, Dean, Devlin, Roberts, Zhou, Le, and Wei}}}
+\bibcite{MasimilianoSegmenter}{{5}{2023}{{Costacurta}}{{}}}
+\bibcite{lexical2}{{6}{2009}{{Eisenstein}}{{}}}
+\bibcite{DialoGPT}{{7}{2021}{{Feng et~al.}}{{Feng, Feng, Qin, Qin, and Liu}}}
+\bibcite{fournier-2013-B}{{8}{2013}{{Fournier}}{{}}}
+\bibcite{lexical1}{{9}{2003}{{Galley et~al.}}{{Galley, McKeown, Fosler-Lussier, and Jing}}}
+\bibcite{TwoLevelTransformerSoftmax}{{10}{2020}{{Glava~s and Somasundaran}}{{}}}
+\bibcite{TextTiling}{{11}{1997}{{Hearst}}{{}}}
+\bibcite{LORA}{{12}{2022}{{Hu et~al.}}{{Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and Chen}}}
+\bibcite{HierarchicalBiLSTM}{{13}{2018}{{Koshorek et~al.}}{{Koshorek, Cohen, Mor, Rotman, and Berant}}}
+\bibcite{EffectOfLongContextWindows}{{14}{2024}{{Liu et~al.}}{{Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, and Liang}}}
+\bibcite{TwoLevelTransformerPretrained}{{15}{2021}{{Lo et~al.}}{{Lo, Jin, Tan, Liu, Du, and Buntine}}}
+\bibcite{CrossAttentionHierarchical}{{16}{2020}{{Lukasik et~al.}}{{Lukasik, Dadachev, Papineni, and Sim{\~o}es}}}
+\bibcite{ContextAffectsFactual}{{17}{2020}{{Petroni et~al.}}{{Petroni, Lewis, Piktus, Rocktäschel, Wu, Miller, and Riedel}}}
+\bibcite{HearstW2002}{{18}{2002}{{Pevzner and Hearst}}{{}}}
+\bibcite{SentenceBERT}{{19}{2019}{{Reimers and Gurevych}}{{}}}
+\bibcite{BiLSTM}{{20}{2016}{{Wang et~al.}}{{Wang, Qian, Soong, He, and Zhao}}}
+\bibcite{XingThesis}{{21}{2024}{{Xing}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Prompting Strategy}{9}{appendix.A}\protected@file@percent }
+\newlabel{Prompting Strategy}{{A}{9}{Prompting Strategy}{appendix.A}{}}
+\gdef \@abspage@last{10}

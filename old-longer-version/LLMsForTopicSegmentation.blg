@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LLMsForTopicSegmentation.aux
+The style file: icml2023.bst
+Database file #1: references.bib
+Warning--empty booktitle in ContextAffectsFactual
+You've used 21 entries,
+            2773 wiz_defined-function locations,
+            785 strings with 12964 characters,
+and the built_in function-call counts, 16192 in all, are:
+= -- 1401
+> -- 1397
+< -- 18
++ -- 463
+- -- 442
+* -- 1484
+:= -- 2553
+add.period$ -- 100
+call.type$ -- 21
+change.case$ -- 198
+chr.to.int$ -- 21
+cite$ -- 43
+duplicate$ -- 557
+empty$ -- 950
+format.name$ -- 469
+if$ -- 3367
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 18
+newline$ -- 139
+num.names$ -- 102
+pop$ -- 397
+preamble$ -- 1
+purify$ -- 178
+quote$ -- 0
+skip$ -- 508
+stack$ -- 0
+substring$ -- 528
+swap$ -- 134
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 231
+warning$ -- 1
+while$ -- 110
+width$ -- 0
+write$ -- 349
+(There was 1 warning)
