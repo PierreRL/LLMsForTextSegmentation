@@ -1,17 +1,12 @@
-% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
 \pdfoutput=1
-% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
-
 \documentclass[11pt]{article}
 
 % Change "review" to "final" to generate the final (sometimes called camera-ready) version.
 % Change to "preprint" to generate a non-anonymous version with page numbers.
 \usepackage[final]{acl}
 
-% Standard package includes
 \usepackage{times}
 \usepackage{latexsym}
-
 \usepackage{amsmath} 
 \usepackage{subfigure}
 \usepackage{booktabs}
@@ -19,46 +14,21 @@
 \usepackage{authblk}
 \usepackage{listings}
 \usepackage{float}
-
-% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
 \usepackage[T1]{fontenc}
-% For Vietnamese characters
-% \usepackage[T5]{fontenc}
-% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
-
-% This assumes your files are encoded as UTF8
-\usepackage[utf8]{inputenc}
-
-% This is not strictly necessary, and may be commented out,
-% but it will improve the layout of the manuscript,
-% and will typically save some space.
 \usepackage{microtype}
-
-% This is also not strictly necessary, and may be commented out.
-% However, it will improve the aesthetics of text in
-% the typewriter font.
 \usepackage{inconsolata}
-
-%Including images in your LaTeX document requires adding
-%additional package(s)
 \usepackage{graphicx}
-
-% If the title and author information does not fit in the area allocated, uncomment the following
-%
-%\setlength\titlebox{<dim>}
-%
-% and set <dim> to something 5cm or larger.
 
 \title{Topic Segmentation Using Generative Language Models}
 
 \author{
- \textbf{Pierrre Mackenzie\textsuperscript{1, 2}},
- \textbf{Maya Shah\textsuperscript{1,3}},
- \textbf{Patrick Frenett\textsuperscript{1}},
+ \textbf{Pierrre Mackenzie}$^{\star,\dagger}$,
+ \textbf{Maya Shah}$^{\star,\ddagger}$,
+ \textbf{Patrick Frenett}$^{\star}$,
 \\
- \textsuperscript{1}Adarga,
- \textsuperscript{2} University of Edinburgh,
- \textsuperscript{3} University of Exeter,
+ $^\star$Adarga,
+ $^\dagger$University of Edinburgh,
+ $^\ddagger$University of Exeter,
 \\
  \small{
    \textbf{Correspondence:} \texttt{lardet[dot]pierre[at]gmail.com}
@@ -68,7 +38,6 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-
       Topic segmentation using generative Large Language Models (LLMs) remains relatively unexplored. Previous methods use lexical or semantic similarity between parts of a document to decide on boundaries but they lack the long range dependency and vast knowledge contained in LLMs. In this work we propose a new prompting strategy and compare to methods based on semantic similarity. We also support the adoption of a less commonly used evaluation metric: Boundary Similarity. Results show that LLMs can be more effective segmenters than existing methods, but issues remain to be solved before they can be relied upon for topic segmentation.
   \end{abstract}
 
@@ -76,15 +45,17 @@
 
 % 1
 % ---------- Introduction ----------
-\input{Sections/1. Introduction/1.1 Topic Segmentation Problem}
-\input{Sections/1. Introduction/1.2 Motivation.tex}
-\input{Sections/1. Introduction/1.3 Related Work.tex}
-
+\input{Sections/1. Introduction/1.1 Motivation.tex}
+\input{Sections/1. Introduction/1.2 Topic Segmentation Problem}
+\input{Sections/Figures_and_Tables/main_figure.tex}
+\input{Sections/1. Introduction/1.3 Related Work}
+\input{Sections/Figures_and_Tables/results_table.tex}
 % 2
 % ---------- Method ----------
 \section{Method}
 \input{Sections/2. Method/2.1 Datasets}
 \input{Sections/2. Method/2.2 Evaluation}
+
 \input{Sections/2. Method/2.3 LLM-Based Text Segmentation}
 
 % 3. Experiments

@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Badjatiya et~al.(2018)Badjatiya, Kurisinkel, Gupta, and Varma}]{CNNFeaturesLSTMAttention}
@@ -64,6 +64,11 @@ Edward~J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wa
 Omri Koshorek, Adir Cohen, Noam Mor, Michael Rotman, and Jonathan Berant. 2018.
 \newblock \href {https://doi.org/10.18653/v1/N18-2075} {Text segmentation as a supervised learning task}.
 \newblock In \emph{Proceedings of the 2018 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers)}, pages 469--473, New Orleans, Louisiana. Association for Computational Linguistics.
+
+\bibitem[{Lewis et~al.(2020)Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal, K\"{u}ttler, Lewis, Yih, Rockt\"{a}schel, Riedel, and Kiela}]{RAG}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich K\"{u}ttler, Mike Lewis, Wen-tau Yih, Tim Rockt\"{a}schel, Sebastian Riedel, and Douwe Kiela. 2020.
+\newblock \href {https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf} {Retrieval-augmented generation for knowledge-intensive nlp tasks}.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~33, pages 9459--9474. Curran Associates, Inc.
 
 \bibitem[{Liu et~al.(2024)Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, and Liang}]{EffectOfLongContextWindows}
 Nelson~F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang. 2024.
