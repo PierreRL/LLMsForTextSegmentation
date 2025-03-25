@@ -9,4 +9,4 @@ We use two naive baselines as points of reference. First, the \emph{Split5} segm
 
 \emph{GPT3.5}\label{GPT3.5}: OpenAI's \texttt{gpt-3.5-turbo-16k}\footnote{Queries were made in August 2023.} was queried using the method defined in Section~\ref{LLM-Based Text Segmentation}. We choose to use deterministic outputs from the model by setting topk $=1$. 
 
-\emph{FlanT5}\label{FlanT5}: We fine-tune Google's Flan-T5 large~\citep{FlanT5} using LORA~\citep{LORA} on a combination of \emph{Wiki}, \emph{Conc-Wiki} and \emph{Synthetic}. We used the same topk $=1$ as \emph{GPT3.5}. Because the model has been fine-tuned we use a much shorter prompt and no few-shot examples.
+\emph{FlanT5}\label{FlanT5}: We fine-tune Google's Flan-T5 large~\citep{FlanT5} (780M) using LORA~\citep{LORA} on a combination of \emph{Wiki}, \emph{Conc-Wiki} and \emph{Synthetic}. Fine-tuning took place until loss plateauted, after approximately 48 GPU hours. We used the same topk $=1$ as \emph{GPT3.5}. Because the model has been fine-tuned we use a much shorter prompt and no few-shot examples.
