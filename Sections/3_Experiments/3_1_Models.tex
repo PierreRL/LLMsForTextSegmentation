@@ -1,0 +1,11 @@
+% 3.1 Results
+\subsection{Models}
+\hspace*{\parindent}\emph{Split5}: A simple baseline which creates segment boundaries every 5 sentences.
+
+\emph{BERT}: Generates a sequence of similarities using embeddings from SentenceBERT. Each element is a weighted average of the cosine similarities with the previous $5$ sentences. Boundaries are placed at troughs in the sequence before long segments are split and short segments are grouped. The threshold for boundary placement is set to 0.3 based on manual testing.
+
+\emph{BERTGraph}: \citet{MasimilianoSegmenter} also uses SentenceBERT cosine similarities, but cluster sentences as a graph to find segments. Post-processing ensures that segments are contiguous.
+
+\emph{GPT3.5}\label{GPT3.5}: OpenAI's \texttt{gpt-3.5-turbo-16k}\footnote{Queries were made in August 2023.} was queried using the method defined in Section~\ref{LLM-Based Text Segmentation}. We choose to use deterministic outputs from the model by setting topk $=1$. 
+
+\emph{FlanT5}\label{FlanT5}: We fine-tune Google's Flan-T5 large~\citep{FlanT5} (780M) using LORA~\citep{LORA} on a combination of \emph{Wiki}, \emph{Conc-Wiki} and a training split of \emph{Synthetic} which took \textasciitilde{}24 GPU hours. We use the same topk $=1$ as \emph{GPT3.5}. Because the model was fine-tuned, we use a much shorter prompt and no few-shot examples.

@@ -38,44 +38,43 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-      Topic segmentation using generative Large Language Models (LLMs) remains relatively unexplored. Previous methods use lexical or semantic similarity between parts of a document to decide on boundaries but they lack the long range dependency and vast knowledge contained in LLMs. In this work we propose a new prompting strategy and compare to methods based on semantic similarity. We also support the adoption of a less commonly used evaluation metric: Boundary Similarity. Results show that LLMs can be more effective segmenters than existing methods, but issues remain to be solved before they can be relied upon for topic segmentation.
-  \end{abstract}
+  Topic segmentation using generative Large Language Models (LLMs) remains relatively unexplored. Previous methods use semantic similarity between sentences, but such models lack the long range dependencies and vast knowledge found in LLMs. In this work, we propose an overlapping and recursive prompting strategy using sentence enumeration. We also support the adoption of the boundary similarity evaluation metric. Results show that LLMs can be more effective segmenters than existing methods, but issues remain to be solved before they can be relied upon for topic segmentation.
+\end{abstract}
 
 \section{Introduction}
 
 % 1
 % ---------- Introduction ----------
-\input{Sections/1. Introduction/1.1 Motivation.tex}
-\input{Sections/1. Introduction/1.2 Topic Segmentation Problem}
+\input{Sections/1_Introduction/1_1_Motivation.tex}
+\input{Sections/1_Introduction/1_2_Topic_Segmentation_Problem}
 \input{Sections/Figures_and_Tables/main_figure.tex}
-\input{Sections/1. Introduction/1.3 Related Work}
+\input{Sections/1_Introduction/1_3_Related_Work}
 \input{Sections/Figures_and_Tables/results_table.tex}
 % 2
 % ---------- Method ----------
 \section{Method}
-\input{Sections/2. Method/2.1 Datasets}
-\input{Sections/2. Method/2.2 Evaluation}
-\input{Sections/2. Method/2.3 LLM-Based Text Segmentation}
+\input{Sections/2_Method/2_1_Datasets}
+\input{Sections/2_Method/2_2_Evaluation}
+\input{Sections/2_Method/2_3_LLM-Based_Text_Segmentation}
 
 % 3. Experiments
 \section{Experiments}\label{Results}
-\input{Sections/3. Experiments/3.1 Models}
-\input{Sections/3. Experiments/3.2 Results}
+\input{Sections/3_Experiments/3_1_Models}
+\input{Sections/3_Experiments/3_2_Results}
 
 % 4. Conclusion
 \section{Conclusion}\label{Conclusion}
-\input{Sections/4. Conclusion/Conclusion}
-
+\input{Sections/4_Conclusion/Conclusion}
 % 5. Appendices
-\input{Sections/5. Appendices/5.1 Ethics Statement}
-\input{Sections/5. Appendices/5.2 Limitations}
-\input{Sections/5. Appendices/5.3 Acknowledgements}
+\input{Sections/5_Appendices/5_1_Ethics_Statement}
+\input{Sections/5_Appendices/5_2_Limitations}
+\input{Sections/5_Appendices/5_3_Acknowledgements}
 
 % Bibliography
 \bibliography{custom}
 
 \appendix
-\input{Sections/5. Appendices/5.4 Appendix}
+\input{Sections/5_Appendices/5_4_Appendix}
 
 
 % This document has been adapted

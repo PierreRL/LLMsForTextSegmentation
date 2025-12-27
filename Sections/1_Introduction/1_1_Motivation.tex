@@ -1,0 +1,13 @@
+% 1.1 Motivation
+% \subsection{Motivation}
+
+% Topic segmentation can be important as a pre-processing step before some other NLP task, or can be important in its own right.
+
+Topic segmentation is the problem of dividing a string of text into constituent `segments'. Each segment should be semantically self-contained such that it is about one thing. For this work, segment boundaries always lie on sentence boundaries. We can then interpret segmentation as a binary classification task; given a list of input sentences, the model must decide whether there exists a boundary between each pair of adjacent sentences.
+
+Despite advances in LLMs, topic segmentation remains a relevant task. Information retrieval, long-document summarisation, classification and RAG~\cite{RAG} can all benefit from their inputs first being broken down by topic. For many open-source or resource-constrained models, context windows limit the size of input. Although newer models have very long context windows, \citet{EffectOfLongContextWindows} show that LLMs do not fully utilise long context. Segmentation can also be important for its own sake in dividing a document into constituent parts, to create a contents page, or summaries and titles for each section.
+
+Segmentation is a non-trivial task. The ambiguous definition of a segment leads to disagreements between humans annotators on where the `correct' boundaries lie~\citep{TextTiling}. This is perhaps why there are few datasets in the field and none with human annotations of passages of text. Instead, annotations are normally derived from concatenations or metadata. For a machine learning model to attain performance comparable to humans is a daunting task that is hard to measure.
+
+% Our application of interest is to use topic segmentation as both a pre-processing step for a document understanding pipeline and as an important step in its own right. This pipeline is used to extract structured information from unstructured text, and the segmentation step is used to break down the document into smaller, more manageable parts. When presented to a user, only semantically self-contained sections of a long document are presented to a user, which can be more easily understood and acted upon.
+

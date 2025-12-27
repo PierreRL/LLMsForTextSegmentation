@@ -4,7 +4,7 @@ The prompting strategy used in this work is a simple schema that is designed to 
 
 \begin{enumerate}
     \item The LLM is prompted with the input text, with integers in square brackets delimiting the sentence boundaries, few-shot examples of the task, a short instruction and a system prompt.
-    \item Segments are validated. This means they must not be too long nor too short and that they do not contain too many punctuation marks as a proportion of the segment length.
+    \item Segments are validated. This means they must not be too long nor too short (> 50 tokens, < 750 tokens) and that they should not contain too many punctuation marks as a proportion of the segment length. We arbitrarily set this to 50\% of the characters in a segment.
     \item Segments that are too long are recursively split into smaller segments through similar prompting strategy. This prompt asks the LLM to return a single segment boundary index.
     \item This process is repeated until all segments are short enough.
     \item Segments that are too short are merged with a neighbouring segment based on the semantic similarity to neighbouring sentences. This part could also be done via prompting but we found this unnecessary.

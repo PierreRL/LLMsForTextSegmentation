@@ -1,0 +1,13 @@
+\section{Related Work}
+
+% Please refer to \citep{XingThesis} which provides a recent, broad overview of topic segmentation.
+
+An influential framework introduced by~\citep{TextTiling} involves computing lexical similarity scores between adjacent sentences before boundaries are placed where similarity is lowest~\citep{lexical1,lexical2}. Such a framework is still in use today but with semantic similarity calculated from embeddings. Different neural architectures have seen use such as RNNs ~\citep{BiLSTM,HierarchicalBiLSTM,CNNFeaturesLSTMAttention} and attention-based models~\cite{CrossAttentionHierarchical,TwoLevelTransformerSoftmax,TwoLevelTransformerPretrained}. However, these models do not leverage the vast knowledge contained in the largest pre-trained language models.
+
+LLMs are the state of the art for a variety of NLP tasks. However, there has been little research into their use for topic segmentation. A loss-based approach was proposed by~\citep{DialoGPT} in which boundaries are placed at peaks in the mean negative log likelihood of tokens in a sentence. This method relies on the dubious assumption that all information about segment boundary location can be expressed by the next token prediction loss. Due to resource constraints, we would have to use less powerful LLMs to test this method, and \citet{XingThesis} finds that prompting LLMs outperforms this method. Therefore, we do not consider it here.
+
+Previous unpublished work has explored segmentation by prompting LLMs~\citep{XingThesis}. They find that prompting ChatGPT is the best dialogue segmentation model unless the input exceeds ChatGPT's limit. Two prompting methods are proposed: one which asks the LLM to return the original text with characters delimiting boundaries and a second in which the LLM is asked to return semantic coherence scores for each pair of sentences in the range $(0,1)$. The first method does not satisfy a guarantee that the model will return the original document unedited and is massively wasteful of tokens. In the second method, the returned scores have no guarantee of directly corresponding to semantic coherence specifically for topic segmentation. Due to monetary constraints, we were unable to test more than one prompting method, and therefore we do not empirically compare against this work.
+
+We propose a new prompting method which ensures the output text is unedited, is vastly more token-efficient, and is not limited by the context window of the model. We show that prompting method outperforms existing non-prompting approaches by comparison with semantic similarity calculated on SentenceBERT~\citep{SentenceBERT} embeddings.
+
+% \vspace{-0.2em}
